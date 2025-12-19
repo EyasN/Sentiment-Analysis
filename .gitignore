@@ -49,11 +49,11 @@ venv.bak/
 # PyCharm
 .idea/
 
-# Results and Generated Files
-results_*.csv
+# Results and Generated Files (uncomment to ignore results)
+# results_*.csv
 *.log
 
-# Generated Plots (optional - uncomment if you want to ignore generated plots)
+# Generated Plots (plots bleiben im Repo für GitHub Pages)
 # plots/*.html
 
 # Data cache
@@ -66,6 +66,7 @@ Thumbs.db
 desktop.ini
 
 # API Keys and Credentials
+.env
 *.key
 *.pem
 credentials.json
@@ -75,3 +76,9 @@ config.ini
 *.tmp
 *.temp
 *.bak
+
+# Hugging Face Model Cache (kann sehr groß werden)
+.cache/
+models/
+huggingface/
+transformers_cache/

@@ -64,7 +64,12 @@ def main():
             print(f"    {row['ticker']} | {row['timestamp']} | {row['title'][:60]}")
     
     if news_df.empty:
-        print("Keine Nachrichten gefunden! Abbruch.")
+        print("\n❌ FEHLER: Keine Nachrichten gefunden!")
+        print("Mögliche Ursachen:")
+        print("  • Yahoo Finance API hat keine Daten zurückgegeben")
+        print("  • Keine API-Keys für NewsAPI/Finnhub konfiguriert")
+        print("  • Netzwerkprobleme")
+        print("\nTipp: Prüfe deine Internetverbindung oder konfiguriere .env mit API-Keys")
         return
 
     # 2. SENTIMENT-ANALYSE
@@ -135,25 +140,25 @@ def main():
     ticker_stats_df['Durchschnitt_Volatility'] = ticker_stats_df['Durchschnitt_Volatility'].round(6)
     
     # Bessere Spaltennamen
-    ticker_stats_df.columns = ['Ticker', 'Korrelation', 'P-Wert', 'Datenpunkte', 'Ø Sentiment', 'Ø Volatilität']
+    ticker_stats_df.columns = ['Ticker', 'Korrelation', 'P-Wert', 'Datenpunkte', 'avg Sentiment', 'avg Volatility']
     ticker_stats_df.to_csv('results_correlation_per_ticker.csv', index=False, sep=';', decimal=',')
     
     # Gesamtstatistik
     overall_stats = pd.DataFrame([
         {
-            'Analyse': 'Sentiment → Volatilität',
+            'Analyse': 'Sentiment vs Volatility',
             'Korrelation': round(results['sentiment_vs_volatility']['correlation'], 4),
             'P-Wert': round(results['sentiment_vs_volatility']['p_value'], 4),
             'Interpretation': 'Haupthypothese'
         },
         {
-            'Analyse': 'Sentiment → Rendite',
+            'Analyse': 'Sentiment vs Rendite',
             'Korrelation': round(results['sentiment_vs_return']['correlation'], 4),
             'P-Wert': round(results['sentiment_vs_return']['p_value'], 4),
             'Interpretation': 'Vergleichswert'
         },
         {
-            'Analyse': '|Sentiment| → Volatilität',
+            'Analyse': '|Sentiment| vs Volatility',
             'Korrelation': round(results['abs_sentiment_vs_volatility']['correlation'], 4),
             'P-Wert': round(results['abs_sentiment_vs_volatility']['p_value'], 4),
             'Interpretation': 'Extremwert-Analyse'

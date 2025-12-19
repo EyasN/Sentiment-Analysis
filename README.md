@@ -42,7 +42,24 @@ LLM Projekt/
 - Python 3.10+
 - Virtual Environment aktiviert
 
-### 2. Projekt ausführen
+### 2. Bibliotheken installieren
+```bash
+pip install -r requirements.txt
+```
+
+Oder manuell:
+```bash
+pip install pandas python-dotenv yfinance requests feedparser transformers torch plotly scipy numpy
+```
+
+### 3. (Optional) API-Keys konfigurieren
+Für mehr Datenquellen:
+```bash
+cp .env.example .env
+# Bearbeite .env und füge deine API-Keys ein
+```
+
+### 4. Projekt ausführen
 ```bash
 python main.py
 ```
