@@ -1,6 +1,6 @@
 # Sentiment-Analyse und Aktienvolatilität
 
-**Universität:** [Deine Uni]  
+**Universität:** Hochschule Reutlingen 
 **Projekt:** Prüfungsleistung Applied Finance in Python  
 **Datum:** Dezember 2025
 
@@ -98,5 +98,4 @@ python main.py
 4. **Machine Learning:** Random Forest für Volatilitätsprognose
 
 ## Autor
-[Dein Name]  
-[Matrikelnummer]
+Eyas
