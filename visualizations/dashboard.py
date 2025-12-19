@@ -345,8 +345,8 @@ def create_dashboard(tickers, ticker_stats=None):
         </div>
         
         <div class="footer">
-            <p>🎓 Universität Projekt | Applied Finance in Python | Dezember 2025</p>
-            <p style="margin-top: 10px;">Sentiment-Analyse mit FinBERT | Daten: Yahoo Finance | Visualisierung: Plotly</p>
+            <p>Sentiment-Analyse mit FinBERT | Daten: Yahoo Finance | Visualisierung: Plotly</p>
+            <p style="margin-top: 10px;">© 2025 | Applied Finance in Python</p>
         </div>
     </div>
     
