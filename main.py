@@ -64,7 +64,7 @@ def main():
             print(f"    {row['ticker']} | {row['timestamp']} | {row['title'][:60]}")
     
     if news_df.empty:
-        print("\n❌ FEHLER: Keine Nachrichten gefunden!")
+        print("\n FEHLER: Keine Nachrichten gefunden!")
         print("Mögliche Ursachen:")
         print("  • Yahoo Finance API hat keine Daten zurückgegeben")
         print("  • Keine API-Keys für NewsAPI/Finnhub konfiguriert")
@@ -93,7 +93,7 @@ def main():
     print("\nDatensätze pro Ticker:")
     for ticker in sorted(merged_df['ticker'].unique()):
         count = len(merged_df[merged_df['ticker'] == ticker])
-        status = "✅" if count >= 3 else "⚠️"
+        status =  "✓" if count >= 3 else "Nicht ausreichend Punkte"
         print(f"  {status} {ticker}: {count} Datenpunkte")
     
     if len(merged_df) < 10:
@@ -211,11 +211,11 @@ def main():
     print(f"  ✓ {dashboard_path}")
     
     print("\n" + "="*60)
-    print("✅ FERTIG! Alle Ergebnisse wurden erstellt.")
+    print(" FERTIG! Alle Ergebnisse wurden erstellt.")
     print("="*60)
-    print("\n📊 DASHBOARD ÖFFNEN:")
+    print("\n DASHBOARD ÖFFNEN:")
     print(f"   Öffne: plots/index.html")
-    print("\n📁 Weitere Dateien:")
+    print("\n Weitere Dateien:")
     print("   • plots/*.html - Einzelne Visualisierungen")
     print("   • results_*.csv - Excel-Tabellen")
 
