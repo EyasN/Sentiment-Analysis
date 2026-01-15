@@ -178,13 +178,16 @@ def main():
     
     # Plots für jeden Ticker
     for ticker in merged_df['ticker'].unique():
+        # Ticker-Name bereinigen (Sonderzeichen entfernen)
+        safe_ticker = str(ticker).strip().replace('\r', '').replace('\n', '')
+        
         # Zeitreihe
         fig1 = plot_sentiment_vs_volatility(merged_df, ticker)
-        fig1.write_html(f"plots/{ticker}_sentiment_volatility.html")
+        fig1.write_html(f"plots/{safe_ticker}_sentiment_volatility.html")
         
         # Scatter
         fig2 = plot_correlation_scatter(merged_df, ticker)
-        fig2.write_html(f"plots/{ticker}_correlation.html")
+        fig2.write_html(f"plots/{safe_ticker}_correlation.html")
     
     # Heatmap für alle
     fig3 = plot_lead_lag_heatmap(lead_lag_results)

@@ -54,7 +54,7 @@ venv.bak/
 *.log
 
 # Generated Plots (plots bleiben im Repo für GitHub Pages)
-# plots/*.html
+plots/*.html
 
 # Data cache
 *.pkl
