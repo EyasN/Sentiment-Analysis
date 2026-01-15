@@ -193,12 +193,12 @@ def create_dashboard(tickers, ticker_stats=None):
 <body>
     <div class="container">
         <div class="header">
-            <h1>📊 Sentiment-Analyse Dashboard</h1>
+            <h1> Sentiment-Analyse Dashboard</h1>
             <p>Zusammenhang zwischen Markt-Sentiment und Aktienvolatilität</p>
         </div>
         
         <div class="nav">
-            <button class="nav-btn active" onclick="showSection('overview')">📈 Übersicht</button>
+            <button class="nav-btn active" onclick="showSection('overview')"> Übersicht</button>
 """
     
     # Buttons für jeden Ticker
@@ -210,7 +210,7 @@ def create_dashboard(tickers, ticker_stats=None):
         <div class="content">
             <!-- Übersichts-Sektion -->
             <div id="overview" class="overview-section active">
-                <h2 class="ticker-title">🎯 Projekt-Übersicht</h2>
+                <h2 class="ticker-title"> Projekt-Übersicht</h2>
                 
                 <div class="stats-grid">
                     <div class="stat-card">
@@ -228,12 +228,12 @@ def create_dashboard(tickers, ticker_stats=None):
                 </div>
                 
                 <div class="plot-container">
-                    <div class="plot-label">🔥 Lead-Lag Heatmap (Alle Ticker)</div>
+                    <div class="plot-label"> Lead-Lag Heatmap (Alle Ticker)</div>
                     <iframe src="lead_lag_heatmap.html"></iframe>
                 </div>
                 
                 <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-top: 30px;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">📋 Hinweise zur Interpretation</h3>
+                    <h3 style="color: #667eea; margin-bottom: 15px;"> Hinweise zur Interpretation</h3>
                     <ul style="line-height: 2; color: #495057;">
                         <li><strong>Sentiment vs. Volatilität:</strong> Zeigt zeitlichen Verlauf beider Kennzahlen</li>
                         <li><strong>Korrelations-Scatterplot:</strong> Visualisiert den direkten Zusammenhang</li>

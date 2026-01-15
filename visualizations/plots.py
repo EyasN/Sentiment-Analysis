@@ -103,26 +103,3 @@ def plot_lead_lag_heatmap(lead_lag_df):
     )
     
     return fig
-
-
-if __name__ == "__main__":
-    # Testdaten
-    import numpy as np
-    
-    dates = pd.date_range('2024-01-01', periods=50)
-    test_df = pd.DataFrame({
-        'ticker': ['AAPL'] * 50,
-        'date': dates,
-        'sentiment_score': np.sin(np.arange(50) * 0.2), # Sinus-Welle
-        'Volatility': np.abs(np.sin(np.arange(50) * 0.2 + 0.5)) * 0.05 # Versetzte Welle
-    })
-    
-    print("=== Test: Plots erstellen ===")
-    
-    fig1 = plot_sentiment_vs_volatility(test_df, 'AAPL')
-    # fig1.show() # Im Browser anzeigen
-    print("Plot 1 erstellt.")
-    
-    fig2 = plot_correlation_scatter(test_df, 'AAPL')
-    # fig2.show()
-    print("Plot 2 erstellt.")
