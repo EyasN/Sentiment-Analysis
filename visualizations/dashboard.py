@@ -279,7 +279,7 @@ def create_dashboard(tickers, ticker_stats=None):
                         </div>
                     </div>
                     <p style="color: #856404; margin-top: 15px; font-size: 0.9em;">
-                        💡 <em>Tipp: Erhöhe den Zeitraum oder warte auf mehr Nachrichten zu diesem Ticker.</em>
+                         <em>Tipp: Erhöhe den Zeitraum oder warte auf mehr Nachrichten zu diesem Ticker.</em>
                     </p>
                 </div>
                 """
@@ -308,7 +308,7 @@ def create_dashboard(tickers, ticker_stats=None):
                             <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;">
                                 <div style="font-size: 0.9em; color: #6c757d; margin-bottom: 5px;">Signifikanz</div>
                                 <div style="font-size: 1.2em; font-weight: bold; color: #495057; margin-top: 10px;">{significance}</div>
-                                <div style="font-size: 0.85em; color: #6c757d; margin-top: 5px;">p = {p_val:.4f}</div>
+                                <div style="font-size: 0.85em; color: #6c757d; margin-top: 5px;">p = {p_val*100:.2f}%</div>
                             </div>
                             <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #ffc107;">
                                 <div style="font-size: 0.9em; color: #6c757d; margin-bottom: 5px;">Datenpunkte</div>
@@ -345,8 +345,8 @@ def create_dashboard(tickers, ticker_stats=None):
         </div>
         
         <div class="footer">
-            <p>Sentiment-Analyse mit FinBERT | Daten: Yahoo Finance | Visualisierung: Plotly</p>
-            <p style="margin-top: 10px;">© 2025 | Applied Finance in Python</p>
+            <p>Sentiment-Analyse mit FinBERT</p>
+            <p style="margin-top: 10px;">© 2026 | Applied Finance in Python</p>
         </div>
     </div>
     

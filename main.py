@@ -82,7 +82,7 @@ def main():
 
     # 3. VOLATILITÄT BERECHNEN
     print("\n--- SCHRITT 3: Volatilitätsberechnung ---")
-    stock_df = calculate_volatility_by_ticker(stock_df, window=20)
+    stock_df = calculate_volatility_by_ticker(stock_df, window=30)
     
     # 4. DATEN ZUSAMMENFÜHREN
     print("\n--- SCHRITT 4: Daten zusammenführen ---")
@@ -183,15 +183,15 @@ def main():
         
         # Zeitreihe
         fig1 = plot_sentiment_vs_volatility(merged_df, ticker)
-        fig1.write_html(f"plots/{safe_ticker}_sentiment_volatility.html")
+        fig1.write_html(f"plots/{safe_ticker}_sentiment_volatility.html", include_plotlyjs='cdn')
         
         # Scatter
         fig2 = plot_correlation_scatter(merged_df, ticker)
-        fig2.write_html(f"plots/{safe_ticker}_correlation.html")
+        fig2.write_html(f"plots/{safe_ticker}_correlation.html", include_plotlyjs='cdn')
     
     # Heatmap für alle
     fig3 = plot_lead_lag_heatmap(lead_lag_results)
-    fig3.write_html("plots/lead_lag_heatmap.html")
+    fig3.write_html("plots/lead_lag_heatmap.html", include_plotlyjs='cdn')
     
     # Dashboard erstellen mit Statistiken
     print("\nErstelle interaktives Dashboard...")

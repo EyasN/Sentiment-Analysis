@@ -1,4 +1,4 @@
 Analyse;Korrelation;P-Wert;Interpretation
-Sentiment vs Volatility;0,0403;0,6493;Haupthypothese
-Sentiment vs Rendite;-0,0322;0,716;Vergleichswert
-|Sentiment| vs Volatility;0,012;0,8925;Extremwert-Analyse
+Sentiment vs Volatility;0,0615;0,4903;Haupthypothese
+Sentiment vs Rendite;-0,0679;0,4461;Vergleichswert
+|Sentiment| vs Volatility;0,1157;0,1936;Extremwert-Analyse
