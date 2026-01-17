@@ -82,7 +82,7 @@ def main():
 
     # 3. VOLATILITÄT BERECHNEN
     print("\n--- SCHRITT 3: Volatilitätsberechnung ---")
-    stock_df = calculate_volatility_by_ticker(stock_df, window=30)
+    stock_df = calculate_volatility_by_ticker(stock_df, window=20)
     
     # 4. DATEN ZUSAMMENFÜHREN
     print("\n--- SCHRITT 4: Daten zusammenführen ---")
