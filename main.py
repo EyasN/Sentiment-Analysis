@@ -13,7 +13,7 @@ import os
 import pandas as pd
 from dotenv import load_dotenv
 
-# Eigene Module importieren
+
 from data.stock_fetcher import fetch_all_stocks, COMPANIES
 from data.news_fetcher import fetch_all_news
 from sentiment.finbert_analyzer import analyze_dataframe, aggregate_daily_sentiment
@@ -32,7 +32,7 @@ from visualizations.plots import (
 )
 from visualizations.dashboard import save_dashboard
 
-# Konfiguration laden (.env Datei für API Keys)
+
 load_dotenv()
 NEWSAPI_KEY = os.getenv("NEWSAPI_KEY")  # Optional
 FINNHUB_KEY = os.getenv("FINNHUB_KEY")  # Optional
